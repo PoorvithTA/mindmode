@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MindMode</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:radial-gradient(circle at 30% 20%,#1e1b4b,#0f172a 70%);
+  color:#f8fafc;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:130px 20px 80px;
+}
+
+.logo{
+  width:150px;
+  height:150px;
+  border-radius:40px;
+  margin:0 auto 30px;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 60px rgba(102,126,234,.6);
+  animation:float 3s ease-in-out infinite;
+}
+
+.logo span{
+  font-size:70px;
+  color:white;
+}
+
+h1{
+  font-size:56px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.subtitle{
+  font-size:18px;
+  opacity:.85;
+  margin-bottom:25px;
+}
+
+.version{
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  font-size:14px;
+  margin-bottom:30px;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+/* BUTTONS */
+.btn-group{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:16px 34px;
+  border-radius:999px;
+  font-weight:600;
+  text-decoration:none;
+  font-size:15px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:.3s;
+}
+
+.primary{
+  background:linear-gradient(135deg,#4facfe,#00f2fe);
+  color:#0f172a;
+}
+
+.primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(0,242,254,.4);
+}
+
+.secondary{
+  background:rgba(255,255,255,.08);
+  color:white;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.secondary:hover{
+  background:rgba(255,255,255,.15);
+}
+
+/* FEATURES */
+.features{
+  max-width:1200px;
+  margin:100px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,.05);
+  padding:32px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  background:rgba(255,255,255,.08);
+}
+
+.card .material-symbols-rounded,
+.card i{
+  font-size:36px;
+  margin-bottom:16px;
+  color:#4facfe;
+}
+
+.card h3{
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  opacity:.7;
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:100px;
+}
+
+footer a{
+  color:#4facfe;
+  text-decoration:none;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="logo">
+    <span class="material-symbols-rounded">psychology</span>
+  </div>
+
+  <h1>MindMode</h1>
+  <div class="subtitle">Smart Browser State Controller. Study. Deep Work. Chill. Free.</div>
+
+  <div id="versionText" class="version">Checking latest release...</div>
+
+  <div class="btn-group">
+    <a id="downloadBtn" class="btn primary" href="#">
+      <span class="material-symbols-rounded">download</span>
+      Download Latest
+    </a>
+
+    <a class="btn secondary" href="https://github.com/PoorvithTA/mindmode" target="_blank">
+      <span class="material-symbols-rounded">code</span>
+      View on GitHub
+    </a>
+  </div>
+</div>
+
+<div class="features">
+
+  <div class="card">
+    <span class="material-symbols-rounded">auto_awesome</span>
+    <h3>AI Smart Blocklist</h3>
+    <p>Generates categorized distraction blocklists automatically for Study & Deep Work modes.</p>
+  </div>
+
+  <div class="card">
+    <i class="bi bi-book-half"></i>
+    <h3>Study Mode</h3>
+    <p>Blocks social & OTT, hides YouTube feed, limits tabs and tracks focus score live.</p>
+  </div>
+
+  <div class="card">
+    <i class="bi bi-laptop"></i>
+    <h3>Deep Work Mode</h3>
+    <p>Whitelist-only browsing, background tab muting and idle tab auto-closing.</p>
+  </div>
+
+  <div class="card">
+    <i class="bi bi-moon-stars-fill"></i>
+    <h3>Chill Mode</h3>
+    <p>Soft visual theme with timer and usage summary — minimal restriction.</p>
+  </div>
+
+  <div class="card">
+    <span class="material-symbols-rounded">insights</span>
+    <h3>Live Focus Analytics</h3>
+    <p>Real-time tracking of visited sites, blocked attempts and dynamic focus score.</p>
+  </div>
+
+  <div class="card">
+    <span class="material-symbols-rounded">schedule</span>
+    <h3>Session Scheduling</h3>
+    <p>Automated sessions with summaries and performance metrics.</p>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> MindMode • Built by 
+  <a href="https://github.com/PoorvithTA" target="_blank">PoorvithTA</a>
+</footer>
+
+<!-- SCRIPT SECTION -->
+<script>
+async function fetchLatestRelease(){
+  try{
+    const response = await fetch(
+      "https://api.github.com/repos/PoorvithTA/mindmode/releases/latest"
+    );
+
+    if(!response.ok) throw new Error("No releases found");
+
+    const data = await response.json();
+    const version = data.tag_name;
+    const downloadUrl = data.zipball_url;
+
+    document.getElementById("versionText").textContent =
+      "MindMode " + version;
+
+    document.getElementById("downloadBtn").href = downloadUrl;
+
+  }catch(error){
+    document.getElementById("versionText").textContent =
+      "MindMode v1.0.0";
+
+    document.getElementById("downloadBtn").href =
+      "https://github.com/PoorvithTA/mindmode/archive/refs/heads/main.zip";
+  }
+}
+
+/* Auto copyright year */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+fetchLatestRelease();
+</script>
+
+</body>
+</html>
