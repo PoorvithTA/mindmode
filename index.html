@@ -227,43 +227,67 @@ footer a{
   </div>
 
 </div>
+ <footer>
+    Made with 💓 & Care by 
+    <a href="https://youtube.com/@PoorvithsLife_Official" target="_blank">Poorvith T A</a>
+    <br><br>
 
-<footer>
-  © <span id="year"></span> MindMode • Built by 
-  <a href="https://github.com/PoorvithTA" target="_blank">PoorvithTA</a>
-</footer>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script>
+      kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'O5O81GPS1N');
+      kofiwidget2.draw();
+    </script>
 
-<!-- SCRIPT SECTION -->
+    <br><br>
+
+    © <span id="year"></span> Poorvith T A • 
+    <a href="https://ig.me/m/i_am_poorvith" target="_blank">Contact Me</a>
+  </footer>
 <script>
-async function fetchLatestRelease(){
-  try{
+  const yearSpan = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  yearSpan.textContent = currentYear;
+</script>
+
+  <script>
+async function fetchLatestRelease() {
+  const versionText = document.getElementById("versionText");
+  const downloadBtn = document.getElementById("downloadBtn");
+
+  try {
     const response = await fetch(
-      "https://api.github.com/repos/PoorvithTA/mindmode/releases/latest"
+      "https://api.github.com/repos/PoorvithTA/mindmode/releases"
     );
 
-    if(!response.ok) throw new Error("No releases found");
+    if (!response.ok) throw new Error("No releases found");
 
-    const data = await response.json();
-    const version = data.tag_name;
-    const downloadUrl = data.zipball_url;
+    const releases = await response.json();
 
-    document.getElementById("versionText").textContent =
-      "MindMode " + version;
+    if (!releases.length) throw new Error("Empty release list");
 
-    document.getElementById("downloadBtn").href = downloadUrl;
+    const latest = releases[0]; // first release (newest)
 
-  }catch(error){
-    document.getElementById("versionText").textContent =
-      "MindMode v1.0.0";
+    versionText.innerText = "Latest Version: " + latest.tag_name;
 
-    document.getElementById("downloadBtn").href =
-      "https://github.com/PoorvithTA/mindmode/archive/refs/heads/main.zip";
+    const asset = latest.assets.find(a =>
+      a.browser_download_url.endsWith(".zip")
+    );
+
+    if (asset) {
+      downloadBtn.href = asset.browser_download_url;
+      downloadBtn.innerText = "Download " + latest.tag_name;
+    } else {
+      downloadBtn.href = latest.html_url;
+      downloadBtn.innerText = "View Release";
+    }
+
+  } catch (err) {
+    versionText.innerText = "Latest version available on GitHub";
+    downloadBtn.href =
+      "https://github.com/PoorvithTA/mindmode/releases";
+    downloadBtn.innerText = "View Releases";
   }
 }
-
-/* Auto copyright year */
-document.getElementById("year").textContent =
-  new Date().getFullYear();
 
 fetchLatestRelease();
 </script>
