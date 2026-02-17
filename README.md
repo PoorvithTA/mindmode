@@ -1,4 +1,4 @@
-# 🧠 MindMode v1.0.0
+# 🧠 MindMode v1.0-beta
 
 Smart Browser State Controller.  
 Study. Deep Work. Chill. Free.
