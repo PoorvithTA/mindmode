@@ -1,218 +1,108 @@
-# \# 🧠⚡ MindMode
+# 🧠 MindMode v1.0.0
 
-# 
+Smart Browser State Controller.  
+Study. Deep Work. Chill. Free.
 
-# > Smart Browser State Controller — Study. Deep Work. Chill. Free.
+---
 
-# 
 
-# MindMode is a powerful productivity Chrome extension that helps you control your browsing behavior with intelligent focus modes, AI-powered blocking, and session analytics.
+## 🎯 Core Features
 
-# 
+### 📚 Study Mode
+- AI-generated distraction blocklist
+- Blocks social media & streaming platforms
+- Hides YouTube recommendations
+- Tab limit enforcement
+- Real-time focus score tracking
 
-# Designed for students, creators, and deep thinkers who want intentional internet usage.
+### 💻 Deep Work Mode
+- Whitelist-only browsing
+- Background tab muting
+- Auto-close idle tabs
+- Maximum tab restriction
 
-# 
+### 🌙 Chill Mode
+- Soft visual UI filter
+- Optional session timer
+- Minimal restriction
+- Usage summary at session end
 
-# ---
+### 🎮 Free Mode
+- No restrictions
+- No blocking
+- Full browsing freedom
 
-# 
+---
 
-# \## 🚀 Features
+## 🤖 AI Smart Blocklist
 
-# 
+- Categorized blocking system:
+  - Social Media
+  - OTT / Streaming
+  - Gaming
+  - News
+  - Adult Content
+  - Shopping
+  - Messaging
+  - Forums
+- Stored locally
+- Never sent to cloud
+- Refreshable anytime
 
-# \### 📚 Study Mode
+---
 
-# \- AI-powered smart blocklist (social, OTT, gaming, news, etc.)
+## 📊 Focus Analytics
 
-# \- Hides YouTube recommendations
+- Live site tracking
+- Distraction counter
+- Dynamic focus score
+- Session completion summary
+- Top sites visited
 
-# \- Tab limit enforcement
+---
 
-# \- Session timer with live focus score
+## ⏱ Session Scheduling
 
-# 
+- Custom session durations
+- Auto-start support
+- Completion notifications
+- Visual progress bar
 
-# \### 💻 Deep Work Mode
+---
 
-# \- Whitelist-only browsing
+## 🔐 Privacy
 
-# \- Background tab muting
+- No external tracking
+- No data selling
+- All analytics stored locally in browser
 
-# \- Auto-closes extra tabs
+---
 
-# \- Distraction tracking
+## 📦 Installation
 
-# 
+1. Download the ZIP from this release
+2. Extract the folder
+3. Open Chrome → `chrome://extensions`
+4. Enable **Developer Mode**
+5. Click **Load Unpacked**
+6. Select the extracted folder
 
-# \### 🌙 Chill Mode
+---
 
-# \- Soft visual filter
+## 🛠 Built With
 
-# \- Session timer
+- Manifest v3
+- Chrome Storage API
+- Chrome Alarms API
+- Chrome Tabs API
+- AI-powered blocklist generation
 
-# \- Usage summary only
+---
 
-# \- No hard restrictions
+## 👨‍💻 Author
 
-# 
+Built by [PoorvithTA](https://github.com/PoorvithTA)
 
-# \### 🎮 Free Mode
+---
 
-# \- No restrictions
-
-# \- No tracking
-
-# \- Full browsing freedom
-
-# 
-
-# ---
-
-# 
-
-# \## 🧠 AI Smart Blocklist
-
-# 
-
-# MindMode can generate a categorized distraction blocklist using AI.
-
-# 
-
-# Categories include:
-
-# \- Social Media
-
-# \- OTT / Streaming
-
-# \- Gaming
-
-# \- News \& Tabloids
-
-# \- Adult Content
-
-# \- Shopping
-
-# \- Messaging Apps
-
-# \- Forums \& Communities
-
-# 
-
-# Blocklist is stored locally in Chrome storage.
-
-# 
-
-# ---
-
-# 
-
-# \## 📊 Session Summary
-
-# 
-
-# After every session, MindMode shows:
-
-# 
-
-# \- ⏱ Total duration  
-
-# \- 🌍 Unique sites visited  
-
-# \- 🚫 Distractions blocked  
-
-# \- ⚡ Focus score  
-
-# \- 🔝 Top visited domains  
-
-# 
-
-# ---
-
-# 
-
-# \## ⚙️ Customization
-
-# 
-
-# \- Edit Deep Work whitelist
-
-# \- Configure max tabs per mode
-
-# \- Create automatic daily schedules
-
-# \- Refresh AI blocklist anytime
-
-# 
-
-# 
-
-# ---
-
-# 
-
-# \## 🛠 Installation (Developer Mode)
-
-# 
-
-# 1\. Download or clone this repository  
-
-# 2\. Go to `chrome://extensions/`  
-
-# 3\. Enable \*\*Developer Mode\*\*  
-
-# 4\. Click \*\*Load unpacked\*\*  
-
-# 5\. Select the project folder  
-
-# 
-
-# ---
-
-# 
-
-# \## 🔒 Privacy
-
-# 
-
-# \- No data is sent to external servers
-
-# \- All session data is stored locally
-
-# \- Blocklist is saved locally in Chrome storage
-
-# 
-
-# ---
-
-# 
-
-# \## 📦 Version
-
-# 
-
-# \*\*v1.0-beta\*\*
-
-# 
-
-# ---
-
-# 
-
-# \## 📜 License
-
-# 
-
-# MIT License
-
-# 
-
-# ---
-
-# 
-
-# Made with focus and intention.
-
-# 
-
+Stay focused. Stay intentional. 🧠
